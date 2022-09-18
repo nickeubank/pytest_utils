@@ -33,7 +33,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus):
                 'visibility': s.visibility
             }
         )
-        json_results["stdout_visibility"] = "hidden"
+        json_results["stdout_visibility"] = "visible"
 
     with open('results.json', 'w') as results:
         results.write(json.dumps(json_results, indent=4))
